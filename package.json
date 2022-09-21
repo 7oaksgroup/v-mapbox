@@ -87,10 +87,6 @@
     "mapbox-gl",
     "mapbox-gl-geocoder"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
   "engines": {
     "node": ">=16.5.0",
     "npm": ">=7.20.0"
@@ -101,6 +97,10 @@
     "url": "https://geospoc.com"
   },
   "contributors": [
+    {
+      "name" : "Kaleb Scholes",
+      "email" : "kaleb@7oaksgroup.com"
+    },
     {
       "name": "Vinayak Kulkarni",
       "email": "inbox.vinayak@gmail.com",
