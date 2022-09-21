@@ -1,13 +1,14 @@
-name: Ship js trigger
+name: Publish package to GitHub Packages
 on:
-  pull_request:
-    types:
-      - closed
+  release:
+    types: [created]
+
 jobs:
   build:
-    name: Release
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'releases/v')
+    permissions: 
+      contents: read
+      packages: write 
     steps:
       - name: Checkout code 🛎
         uses: actions/checkout@v3
@@ -18,7 +19,7 @@ jobs:
       - name: Setup node env 🏗
         uses: actions/setup-node@v3
         with:
-          node-version: 17
+          node-version: 18
           registry-url: 'https://registry.npmjs.org'
           check-latest: true
           cache: 'npm'
@@ -30,8 +31,6 @@ jobs:
         run: npm ci --prefer-offline --no-audit
 
       - name: Release new version to registry 🎉
-        run: npx shipjs trigger
+        run: npm publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-          SLACK_INCOMING_HOOK: ${{ secrets.SLACK_INCOMING_HOOK }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
