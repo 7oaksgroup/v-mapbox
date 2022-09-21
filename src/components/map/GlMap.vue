@@ -116,7 +116,7 @@
   });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .mgl-hidden {
     display: none;
   }
