@@ -117,7 +117,7 @@
     "type": "git",
     "url": "git@github.com:geospoc/v-mapbox.git"
   },
-  "private": false,
+  "private": true,
   "sideEffects": [
     "*.css"
   ],

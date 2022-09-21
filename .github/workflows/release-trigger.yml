@@ -24,7 +24,8 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           check-latest: true
           cache: 'npm'
-
+          scope: '@7oaksgroup'
+          
       - name: Upgrade npm 🎉
         run: npm i -g npm@latest
 
