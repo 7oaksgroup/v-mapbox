@@ -117,7 +117,7 @@
     "type": "git",
     "url": "git@github.com:7oaksgroup/v-mapbox.git"
   },
-  "private": true,
+  "private": false,
   "sideEffects": [
     "*.css"
   ],
