@@ -1,6 +1,6 @@
 {
   "name": "@7oaksgroup/v-mapbox",
-  "version": "1.12.0",
+  "version": "1.12.1",
   "description": "Mapbox with Vue 💚",
   "types": "types/index.d.ts",
   "main": "dist/v-mapbox.cjs.js",

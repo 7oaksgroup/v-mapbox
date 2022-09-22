@@ -7,9 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: 
+    permissions:
       contents: read
-      packages: write 
+      packages: write
     steps:
       - name: Checkout code 🛎
         uses: actions/checkout@v3
@@ -25,12 +25,15 @@ jobs:
           check-latest: true
           cache: 'npm'
           scope: '@7oaksgroup'
-          
+
       - name: Upgrade npm 🎉
         run: npm i -g npm@latest
 
       - name: Install dependencies 🚀
         run: npm ci --prefer-offline --no-audit
+
+      - name: Run build 🏁
+        run: npm run build
 
       - name: Release new version to registry 🎉
         run: npm publish
