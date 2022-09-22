@@ -17,7 +17,6 @@
     "bundle": "rollup -c build/rollup.config.ts",
     "bundle:min": "rollup -c build/rollup.config.min.ts",
     "test": "echo 'test!'",
-    "prepare": "husky install",
     "docs:dev": "export NODE_OPTIONS=--openssl-legacy-provider; vuepress dev docs",
     "docs:build": "export NODE_OPTIONS=--openssl-legacy-provider; vuepress build docs",
     "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:css",
@@ -39,8 +38,6 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.4",
-    "@commitlint/cli": "^16.0.2",
-    "@commitlint/config-conventional": "^16.0.0",
     "@rollup/plugin-alias": "^3.1.8",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-beep": "^0.2.0",
@@ -59,7 +56,6 @@
     "eslint-plugin-jsdoc": "^39.3.6",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^9.5.1",
-    "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
     "mapbox-gl": "2.10.0",
     "prettier": "^2.5.1",
@@ -68,7 +64,6 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-vue": "5.1.9",
     "sass": "^1.44.0",
-    "shipjs": "^0.24.0",
     "stylelint": "^14.1.0",
     "stylelint-config-html": "^1.0.0",
     "stylelint-config-prettier": "^9.0.3",
@@ -122,7 +117,7 @@
     "*.css"
   ],
   "bugs": {
-    "url": "https://github.com/geospoc/v-mapbox/issues"
+    "url": "https://github.com/7oaksgroup/v-mapbox/issues"
   },
   "homepage": "https://v-mapbox.geospoc.io/"
 }
