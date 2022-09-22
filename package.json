@@ -1,5 +1,5 @@
 {
-  "name": "v-mapbox",
+  "name": "@7oaksgroup/v-mapbox",
   "version": "1.12.0",
   "description": "Mapbox with Vue 💚",
   "types": "types/index.d.ts",
@@ -115,7 +115,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:geospoc/v-mapbox.git"
+    "url": "git@github.com:7oaksgroup/v-mapbox.git"
   },
   "private": true,
   "sideEffects": [
